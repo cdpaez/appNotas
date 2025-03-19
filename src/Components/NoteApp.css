@@ -2,13 +2,20 @@
 
 /* Estilo para el contenedor principal de las notas */
 .note-app {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
+  width: 100%; /* Ancho del 100% del contenedor padre */
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+.note-list {
+  height: 100%;
+  overflow: auto; /* Permite el desplazamiento si el contenido excede el tamaño del contenedor */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo para el título */

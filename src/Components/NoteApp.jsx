@@ -28,12 +28,15 @@ const NotesApp = () => {
 
   return (
     <div className="note-app">
-      <h1>Notas</h1>
-      <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Título" />
-      <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder="Contenido"></textarea>
-      <button onClick={handleAddNote}>Agregar Nota</button>
 
-      <ul>
+      <div className="note-form">
+        <h1>Notas</h1>
+        <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Título" />
+        <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder="Contenido"></textarea>
+        <button onClick={handleAddNote}>Agregar Nota</button>
+      </div>
+      
+      <ul className="notes-list">
         {
           notes.map((note) => (
             <li key={note.id}>
